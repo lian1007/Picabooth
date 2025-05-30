@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Picabooth</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ✅ 導覽列 -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+      <a href="#" class="coffee-btn">☕</a>
+    </nav>
+
+    <!-- 大標題 -->
+    <div id="tittle">PikaBooths</div>
+
+    <!-- 🖼 拼貼圖輸出區 -->
+    <canvas id="collage"></canvas>
+    <img id="collageImg" style="margin-top: 20px" />
+
+    <!-- 📸 拍照區 -->
+    <video id="video" autoplay></video>
+
+    <div id="btns">
+      <button id="snap">
+        <img id="capture" src="Snapp.png" alt="" />
+      </button>
+      <button id="reset">reset</button>
+    </div>
+
+    <div class="preview-row" id="previewRow"></div>
+
+    <!-- ✅ 外部 JS -->
+    <script src="main.js"></script>
+  </body>
+</html>

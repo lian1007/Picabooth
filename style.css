@@ -1,0 +1,131 @@
+.silkscreen-regular {
+  font-family: 'Silkscreen', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: 'Silkscreen', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #cde2ff, #81cffd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+video {
+  border: 4px solid #333;
+  border-radius: 10px;
+  width: 25vw;
+  height: auto;
+  margin-top: 30px;
+}
+
+.camera-wrapper {
+  position: relative;
+  width: 320px; /* 或根據你 video 寬度 */
+  height: auto;
+  margin-top: 30px;
+}
+
+#collageImg {
+  height: 500px;
+  object-fit: contain;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: none;
+  background: white;
+}
+
+#tittle {
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 40pt;
+  letter-spacing: -5px;
+}
+
+#collage {
+  display: none;
+}
+
+#btns {
+  margin-top: 20px;
+}
+
+/* 導覽列 ------------------------------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 12px;
+  background: #c2dffe;
+  border-radius: 999px;
+  box-shadow: inset 0px 0px 20px 6px rgba(255, 255, 255, 0.5),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.677), 0 6px 13px rgb(74 74 74 / 5%);
+  backdrop-filter: blur(12px); /* 毛玻璃模糊效果 */
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 12px; /* 左右各留12px間距 */
+}
+
+.coffee-btn {
+  right: 10px;
+  padding: 6px 14px;
+  color: white;
+  font-size: 14px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.coffee-btn:hover {
+  background: #ffffff;
+}
+
+.preview-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.preview-row img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 按鈕 ------------------------------- */
+
+button {
+  border: 2px solid black;
+  border-radius: 0.5em;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
