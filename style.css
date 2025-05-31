@@ -37,7 +37,7 @@ video {
 }
 
 #collageImg {
-  height: 500px;
+  height: 550px;
   object-fit: contain;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -128,4 +128,66 @@ button:active {
 button img {
   width: 30px;
   height: 30px;
+}
+
+/* 選顏色 ------------------------------- */
+
+.color-picker {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.color-picker button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  text-align: center;
+  color: white;
+  padding: 0;
+}
+
+.color-picker button::after {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.color-picker button.selected::after {
+  opacity: 1;
+}
+
+.color-picker button[data-color='#ffffff'].selected::after {
+  color: rgb(61, 61, 61);
+}
+
+.color-picker button[data-color='#000000'] {
+  background: #000;
+}
+.color-picker button[data-color='#ffffff'] {
+  background: #fff;
+}
+.color-picker button[data-color='#ffc0cb'] {
+  background: #ffc0cb;
+}
+.color-picker button[data-color='#999999'] {
+  background: #999999;
+}
+.color-picker button[data-color='#81cffd'] {
+  background: #81cffd;
+}
+.color-picker button[data-color='#caa9ff'] {
+  background: #caa9ff;
 }

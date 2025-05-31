@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <!-- ✅ 導覽列s -->
+    <!-- ✅ 導覽列 -->
     <nav class="navbar">
       <div class="nav-left">
         <a href="index.html">Home</a>
@@ -23,11 +23,20 @@
     </nav>
 
     <!-- 大標題 -->
-    <div id="tittle">PikaBoothsss</div>
+    <div id="tittle">PikaBooth</div>
 
     <!-- 🖼 拼貼圖輸出區 -->
     <canvas id="collage"></canvas>
     <img id="collageImg" style="margin-top: 20px" />
+
+    <div class="color-picker">
+      <button data-color="#000000" title="黑"></button>
+      <button data-color="#ffffff" title="白" class="selected"></button>
+      <button data-color="#ffc0cb" title="粉"></button>
+      <button data-color="#999999" title="灰"></button>
+      <button data-color="#81cffd" title="藍"></button>
+      <button data-color="#caa9ff" title="紫"></button>
+    </div>
 
     <!-- 📸 拍照區 -->
     <video id="video" autoplay></video>

@@ -7,11 +7,36 @@ const previewRow = document.getElementById('previewRow');
 const collageCanvas = document.getElementById('collage');
 const collageImg = document.getElementById('collageImg');
 const FinalIm = document.getElementById('finalImg');
-
+const colorButtons = document.querySelectorAll('.color-picker button');
 const capturedImages = [];
+
+let selectedBgColor = '#ffffff'; // 預設為白色
+
+document.querySelectorAll('.color-picker button').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.color-picker button').forEach((btn) => {
+      btn.classList.remove('selected');
+    });
+    button.classList.add('selected');
+    selectedBgColor = button.dataset.color;
+  });
+});
 
 navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
   video.srcObject = stream;
+});
+
+colorButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // 移除舊的 selected 樣式
+    colorButtons.forEach((btn) => btn.classList.remove('selected'));
+
+    // 加上目前點的按鈕樣式
+    button.classList.add('selected');
+
+    // 更新背景色
+    selectedBgColor = button.dataset.color;
+  });
 });
 
 snapButton.addEventListener('click', () => {
@@ -23,6 +48,7 @@ snapButton.addEventListener('click', () => {
 });
 
 function takePhoto() {
+  console.log('📷 takePhoto() 被呼叫了');
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
   // ✅ 鏡像反轉
@@ -58,7 +84,7 @@ function generateCollage() {
   collageCanvas.width = imgWidth + padding * 2;
   collageCanvas.height = totalHeight;
 
-  ctx.fillStyle = 'white';
+  ctx.fillStyle = selectedBgColor;
   ctx.fillRect(0, 0, collageCanvas.width, collageCanvas.height);
 
   const loadImages = capturedImages.map((src) => {
